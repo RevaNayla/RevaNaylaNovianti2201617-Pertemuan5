@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class nomor1 {
+
+ // Fungsi untuk menampilkan bilangan dari 1 sampai n
+    public static void tampilkanBilangan(int start, int end) {
+        System.out.println("Bilangan dari 1 sampai " + end + ":");
+        for (int i = start; i <= end; i++) {
+            System.out.print(i + " ");
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan nilai n (n >= 1): ");
+        int n = scanner.nextInt();
+
+        if (n >= 1) {
+            tampilkanBilangan(1, n);
+        } else {
+            System.out.println("Masukkan nilai n yang valid (n >= 1).");
+        }
+
+        scanner.close();
+    }
+
+   
+
+}
