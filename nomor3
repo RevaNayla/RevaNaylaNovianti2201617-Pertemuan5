@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class nomor3 {
+
+    
+    // Fungsi untuk menentukan jenis segitiga (siku-siku, lancip, atau tumpul)
+    public static void jenisSegitiga(int a, int b, int c) {
+        if (a + b > c && a + c > b && b + c > a) {
+            if (a * a + b * b == c * c) {
+                System.out.println("Segitiga Siku-siku");
+            } else if (a * a + b * b < c * c) {
+                System.out.println("Segitiga Tumpul");
+            } else {
+                System.out.println("Segitiga Lancip");
+            }
+        } else {
+            System.out.println("Tidak membentuk segitiga");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan panjang sisi a: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Masukkan panjang sisi b: ");
+        int b = scanner.nextInt();
+
+        System.out.print("Masukkan panjang sisi c: ");
+        int c = scanner.nextInt();
+
+        jenisSegitiga(a, b, c);
+
+        scanner.close();
+    }
+
+}
